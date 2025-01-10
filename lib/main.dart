@@ -37,10 +37,30 @@ class ProductListPage extends StatefulWidget {
 
 class _ProductListPageState extends State<ProductListPage> {
   final List<Map<String, dynamic>> products = [
-    {'name': 'iPhone 15', 'price': 1299.0},
-    {'name': 'MacBook Pro', 'price': 2499.0},
-    {'name': 'iPad Air', 'price': 799.0},
-    {'name': 'AirPods Pro', 'price': 249.0},
+    {
+      'name': 'iPhone 15',
+      'price': 1299.0,
+      'imageUrl':
+          'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-blue?wid=5120&hei=2880&fmt=webp&qlt=70&.v=cHJOTXEwTU92OEtKVDV2cVB1R2FTSjlERndlRTljaUdZeHJGM3dlLzR2OGlYQ0tYMHd1OS9ZREtnNzFSR1owOHF2TWlpSzUzejRCZGt2SjJUNGl1VEtsS0dZaHBma3VTb3UwU2F6dkc4TGZPaDVjV2NEQVBZbTZldUQyWkpKRHk&traceId=1',
+    },
+    {
+      'name': 'MacBook Pro',
+      'price': 2499.0,
+      'imageUrl':
+          'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1728916305295',
+    },
+    {
+      'name': 'iPad Air',
+      'price': 799.0,
+      'imageUrl':
+          'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-air-model-unselect-gallery-1-202405?wid=5120&hei=2880&fmt=webp&qlt=70&.v=azZtTlRzREZ3NzhWaHRDQW5YeUV0UEs0TkxxOFYxN2dtSHJMdW5sNDFVK3MxV2hYTmJkSS9ZdDBsUEkxd0lnTE9UVDVQbVhkcDIxQlRzeDZXVVpQSzkyUzNxNUJkYUtvMmZUbWtpbCtIZFA4VWEyeVNLWWN4VjljeXFFSFhCanU&traceId=1',
+    },
+    {
+      'name': 'AirPods Pro',
+      'price': 249.0,
+      'imageUrl':
+          'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-2-202409-gallery-4?wid=4056&hei=2400&fmt=jpeg&qlt=90&.v=1726015508374',
+    },
   ];
 
   final Map<int, int> quantities = {}; // Stores quantities for each product.
@@ -125,6 +145,13 @@ class _ProductListPageState extends State<ProductListPage> {
                 return Card(
                   margin: const EdgeInsets.all(8.0),
                   child: ListTile(
+                    leading: Image.network(
+                      product['imageUrl'], // Load the image from the URL
+                      width: 50, // Set a specific width for the image
+                      height: 50, // Set a specific height for the image
+                      fit: BoxFit
+                          .cover, // Make sure the image is properly fitted
+                    ),
                     title: Text(product['name']),
                     subtitle: Text('\$${product['price']}'),
                     trailing: Row(
