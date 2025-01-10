@@ -16,6 +16,7 @@ This is a simple shopping cart app built using **Flutter**. The app allows users
 
 ## Screenshots
 _Example of the product list screen_
+
 ![Product List Screen](assets/screenshots/product_list.png)
 
 _Example of the cart screen_
