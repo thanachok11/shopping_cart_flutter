@@ -1,16 +1,44 @@
-# project0
+# Shopping Cart Flutter App
 
-A new Flutter project.
+This is a simple shopping cart app built using **Flutter**. The app allows users to browse through a list of products, add them to their cart, and view their cart with quantities and total amounts.
+
+---
+
+## Features
+
+- **Product List**: Display a list of products with their prices.
+- **Add to Cart**: Users can add products to the cart with a customizable quantity.
+- **Shopping Cart**: View added products in the cart with total quantities and prices.
+- **Clear Quantities**: Reset all product quantities back to zero.
+- **SnackBar Notifications**: Notify users when an item is added to the cart.
+
+---
+
+## Screenshots
+
+![Product List Screen](assets/screenshots/product_list.png)
+_Example of the product list screen_
+
+![Cart Screen](assets/screenshots/cart_screen.png)
+_Example of the cart screen_
+
+---
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Follow the steps below to get this app running on your local machine.
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Before you begin, make sure you have the following installed:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Flutter](https://flutter.dev/docs/get-started/install)
+- [Dart](https://dart.dev/get-dart)
+- A code editor (e.g., [Visual Studio Code](https://code.visualstudio.com/) or [Android Studio](https://developer.android.com/studio))
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/shopping-cart-flutter.git
